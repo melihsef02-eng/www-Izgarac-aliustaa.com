@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Izgaracı Ali Usta — Izgara lezzetleri, özenli hazırlık ve samimi hizmet.">
+  <meta name="theme-color" content="#090909">
+  <title>Izgaracı Ali Usta | Izgara Lezzetleri</title>
+  <style>
+    :root {
+      --bg: #090909;
+      --panel: #141414;
+      --panel-2: #1c1c1c;
+      --text: #f7f7f7;
+      --muted: #b8b8b8;
+      --line: #333;
+      --white: #fff;
+      --black: #080808;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1120px, 92%); margin: auto; }
+    header {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(9,9,9,.94); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { font-size: 1.18rem; font-weight: 900; letter-spacing: .5px; }
+    .brand span { display: block; color: var(--muted); font-size: .68rem; letter-spacing: 3px; font-weight: 600; }
+    .links { display: flex; gap: 26px; align-items: center; color: #ddd; font-size: .93rem; }
+    .links a:hover { color: #fff; text-decoration: underline; text-underline-offset: 6px; }
+    .menu-toggle { display: none; border: 1px solid #555; color: #fff; background: transparent; padding: 8px 12px; border-radius: 8px; font-size: 1.2rem; }
+    .hero {
+      min-height: 650px; display: grid; place-items: center; text-align: center;
+      background:
+        linear-gradient(rgba(0,0,0,.68), rgba(0,0,0,.82)),
+        radial-gradient(ellipse at 50% 30%, #555 0%, #242424 34%, #090909 72%);
+      border-bottom: 1px solid var(--line);
+      padding: 90px 0;
+    }
+    .eyebrow { color: #ddd; text-transform: uppercase; letter-spacing: 5px; font-size: .78rem; font-weight: 700; }
+    h1 { font-size: clamp(2.8rem, 8vw, 6.2rem); line-height: 1.02; margin: 22px 0; font-weight: 900; letter-spacing: -3px; }
+    h1 span { color: #aaa; }
+    .hero p { max-width: 650px; margin: 0 auto; color: #d0d0d0; font-size: clamp(1rem, 2vw, 1.18rem); }
+    .actions { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; margin-top: 34px; }
+    .btn { display: inline-block; padding: 13px 23px; border: 1px solid #fff; border-radius: 3px; font-weight: 800; transition: .2s; }
+    .btn.primary { background: #fff; color: #090909; }
+    .btn:hover { transform: translateY(-2px); background: #ddd; color: #090909; }
+    section { padding: 88px 0; }
+    .section-head { text-align: center; margin-bottom: 42px; }
+    .section-head .eyebrow { color: #999; }
+    h2 { font-size: clamp(2rem, 5vw, 3.2rem); margin-top: 10px; line-height: 1.1; }
+    .section-head p { color: var(--muted); max-width: 620px; margin: 15px auto 0; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 42px; align-items: center; }
+    .about-art {
+      min-height: 340px; border: 1px solid #444; background:
+        linear-gradient(135deg, rgba(255,255,255,.08), transparent 55%),
+        repeating-linear-gradient(135deg, #181818 0 12px, #101010 12px 24px);
+      display: grid; place-items: center; text-align: center; padding: 30px;
+    }
+    .about-art strong { font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.05; letter-spacing: 2px; }
+    .about-art span { display: block; color: #aaa; font-size: .8rem; letter-spacing: 4px; margin-top: 14px; }
+    .about-copy p { color: var(--muted); margin-top: 15px; }
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 28px; }
+    .feature { border: 1px solid var(--line); padding: 20px; background: var(--panel); }
+    .feature b { display: block; margin-bottom: 6px; }
+    .feature small { color: var(--muted); }
+    .menu-section { background: #101010; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .menu-card { border: 1px solid #393939; background: var(--panel); padding: 28px; min-height: 190px; }
+    .menu-card .number { color: #888; font-size: .8rem; letter-spacing: 3px; }
+    .menu-card h3 { font-size: 1.35rem; margin: 12px 0 8px; }
+    .menu-card p { color: var(--muted); font-size: .94rem; }
+    .notice { color: #aaa; text-align: center; font-size: .85rem; margin-top: 24px; }
+    .contact-box { border: 1px solid #444; background: linear-gradient(135deg, #1b1b1b, #101010); padding: 42px; text-align: center; }
+    .contact-box p { color: var(--muted); max-width: 620px; margin: 14px auto 24px; }
+    footer { border-top: 1px solid var(--line); padding: 26px 0; color: #999; font-size: .85rem; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap; }
+    @media (max-width: 760px) {
+      .menu-toggle { display: block; }
+      .links { display: none; position: absolute; top: 76px; left: 0; right: 0; padding: 20px 4%; background: #101010; border-bottom: 1px solid var(--line); flex-direction: column; align-items: flex-start; }
+      .links.open { display: flex; }
+      .about-grid { grid-template-columns: 1fr; }
+      .features, .menu-grid { grid-template-columns: 1fr; }
+      .hero { min-height: 570px; }
+      h1 { letter-spacing: -1.5px; }
+      section { padding: 68px 0; }
+      .contact-box { padding: 30px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#anasayfa">IZGARACI ALİ USTA<span>IZGARA LEZZETLERİ</span></a>
+      <button class="menu-toggle" aria-label="Menüyü aç" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
+      <nav class="links" aria-label="Ana menü">
+        <a href="#anasayfa">Ana Sayfa</a>
+        <a href="#hakkimizda">Hakkımızda</a>
+        <a href="#lezzetler">Lezzetlerimiz</a>
+        <a href="#iletisim">İletişim</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="anasayfa">
+      <div class="container">
+        <div class="eyebrow">Özenle hazırlanır, keyifle paylaşılır</div>
+        <h1>IZGARANIN<br><span>USTA LEZZETİ</span></h1>
+        <p>Birbirinden lezzetli ızgara çeşitlerimiz, özenle hazırlanan ürünlerimiz ve samimi hizmet anlayışımızla sofralarınıza lezzet katıyoruz.</p>
+        <div class="actions">
+          <a class="btn primary" href="#lezzetler">Lezzetlerimizi Keşfet</a>
+          <a class="btn" href="#hakkimizda">Bizi Tanıyın</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="hakkimizda">
+      <div class="container about-grid">
+        <div class="about-art">
+          <div><strong>ALI USTA</strong><span>LEZZET • ÖZEN • HİZMET</span></div>
+        </div>
+        <div class="about-copy">
+          <div class="eyebrow">Hakkımızda</div>
+          <h2>Lezzetin<br>ustalıkla buluştuğu yer.</h2>
+          <p>Izgaracı Ali Usta olarak misafirlerimize özenli hazırlık, kaliteli ürünler ve güler yüzlü hizmet sunmayı amaçlıyoruz.</p>
+          <p>Taze malzemeler ve ustalıkla hazırlanan ızgara lezzetlerimizle her ziyaretinizde güzel bir yemek deneyimi yaşatmak için çalışıyoruz.</p>
+          <div class="features">
+            <div class="feature"><b>Özenli hazırlık</b><small>Her aşamada dikkat ve titizlik.</small></div>
+            <div class="feature"><b>Kaliteli ürünler</b><small>Lezzete önem veren seçimler.</small></div>
+            <div class="feature"><b>Samimi hizmet</b><small>Misafir memnuniyeti önceliğimiz.</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section" id="lezzetler">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Menümüz</div>
+          <h2>Izgara lezzetlerimiz</h2>
+          <p>Menümüzdeki ürünler ve güncel seçenekler hakkında bilgi almak için işletmemizle iletişime geçebilirsiniz.</p>
+        </div>
+        <div class="menu-grid">
+          <article class="menu-card"><div class="number">01 / IZGARA</div><h3>Izgara Çeşitleri</h3><p>Ustalıkla hazırlanan ızgara seçenekleri.</p></article>
+          <article class="menu-card"><div class="number">02 / ÖZEL LEZZETLER</div><h3>Ali Usta'nın Lezzetleri</h3><p>Özenle hazırlanan, keyifle sunulan özel tatlar.</p></article>
+          <article class="menu-card"><div class="number">03 / TAMAMLAYICILAR</div><h3>Yan Lezzetler</h3><p>Izgara keyfinizi tamamlayan eşlikçiler.</p></article>
+        </div>
+        <p class="notice">Not: Ürün adları, içerikler ve fiyatlar işletmenin güncel menüsüne göre eklenmelidir.</p>
+      </div>
+    </section>
+
+    <section id="iletisim">
+      <div class="container">
+        <div class="contact-box">
+          <div class="eyebrow">İletişim</div>
+          <h2>Sizi ağırlamaktan<br>mutluluk duyarız.</h2>
+          <p>Adres, telefon, çalışma saatleri ve sipariş bilgileri işletme tarafından doğrulandıktan sonra bu alana eklenebilir.</p>
+          <a class="btn primary" href="#anasayfa">Sayfanın Başına Dön</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Izgaracı Ali Usta. Tüm hakları saklıdır.</span>
+      <span>Lezzet • Özen • Samimiyet</span>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelectorAll('.links a').forEach(link => {
+      link.addEventListener('click', () => document.querySelector('.links').classList.remove('open'));
+    });
+  </script>
+</body>
+</html>
