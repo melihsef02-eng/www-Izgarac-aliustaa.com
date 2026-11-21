@@ -1,47 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#171411">
-<meta name="description" content="Izgaracı Ali Usta - Çorum Merkez Gülabibey'de ızgara lezzetleri. Telefon ve konum bilgileri.">
+<meta name="description" content="Izgaracı Ali Usta - Çorum Merkez Gülabibey. Izgara lezzetleri, fotoğraflar ve iletişim.">
 <title>Izgaracı Ali Usta | Çorum</title>
 <style>
-:root{--bg:#171411;--panel:#211d19;--gold:#e6ad55;--cream:#fff7eb;--muted:#c7b9a5;--line:#ffffff20}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--cream);font-family:Arial,Helvetica,sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
-header{position:sticky;top:0;z-index:10;background:#171411ed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-weight:900;letter-spacing:1px;color:var(--gold);display:flex;align-items:center;gap:12px}.brand img{width:48px;height:48px;object-fit:cover;border-radius:50%;border:1px solid #e6ad5577}nav{display:flex;gap:24px;color:var(--muted);font-size:.94rem}nav a:hover{color:var(--gold)}
-.hero{padding:82px 0 72px;background:linear-gradient(90deg,#100e0cf2,#100e0c99),url('assets/karisik-izgara.jpg') center/cover}.eyebrow{color:var(--gold);font-weight:800;letter-spacing:3px;text-transform:uppercase;font-size:.78rem}h1{font-size:clamp(2.8rem,7vw,5.6rem);line-height:1.02;margin:16px 0;max-width:760px}h1 span{color:var(--gold)}.lead{color:#e5d8c7;max-width:600px;font-size:1.12rem}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.btn{display:inline-block;padding:13px 20px;border-radius:8px;font-weight:800;background:var(--gold);color:#21170b}.btn.alt{background:transparent;border:1px solid var(--gold);color:var(--cream)}
-section{padding:72px 0}.section-title{text-align:center;margin:0 0 10px;font-size:clamp(1.9rem,4vw,2.7rem)}.sub{text-align:center;color:var(--muted);max-width:680px;margin:0 auto 36px}.intro{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}.intro img{width:100%;max-height:520px;object-fit:cover;border-radius:16px;border:1px solid var(--line)}.intro-copy{color:var(--muted)}.intro-copy h3{color:var(--gold);font-size:1.5rem}
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.photo{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}.photo img{width:100%;height:260px;display:block;object-fit:cover;transition:transform .35s}.photo:hover img{transform:scale(1.035)}.photo figcaption{padding:12px 15px;color:var(--muted);font-weight:700}
-.promo-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.promo-grid img{width:100%;height:100%;max-height:560px;object-fit:cover;border-radius:15px;border:1px solid var(--line)}.video-wrap{max-width:850px;margin:0 auto;background:var(--panel);padding:12px;border:1px solid var(--line);border-radius:16px}.video-wrap video{width:100%;display:block;border-radius:10px;max-height:560px;background:#000}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}.contact-box{background:var(--panel);padding:28px;border-radius:14px;border:1px solid var(--line)}.contact-box h3{color:var(--gold);margin-top:0}.contact-line{margin:15px 0;color:var(--muted)}.map{width:100%;height:330px;border:0;border-radius:14px;filter:grayscale(.25)}footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:.9rem;text-align:center}
-@media(max-width:760px){.nav{align-items:flex-start;padding:12px 0;flex-direction:column}nav{gap:16px;flex-wrap:wrap}.hero{padding:68px 0}.intro,.contact-grid,.promo-grid{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}.photo img{height:190px}section{padding:54px 0}}
-@media(max-width:430px){.gallery{grid-template-columns:1fr}.photo img{height:240px}}
+:root{--bg:#171411;--panel:#211d19;--gold:#e6ad55;--cream:#fff7eb;--muted:#c7b9a5}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--cream);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none} .wrap{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:5;background:#171411f2;border-bottom:1px solid #ffffff20}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:1px;color:var(--gold)}
+.brand-mark{width:46px;height:46px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;font-size:22px}
+nav{display:flex;gap:22px;color:var(--muted);font-size:.95rem} nav a:hover{color:var(--gold)}
+.hero{padding:78px 0;background:linear-gradient(90deg,#100e0df2,#100e0d99),url('assets/lezzet-01.jpg') center/cover}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:center}
+.eyebrow{color:var(--gold);font-weight:700;letter-spacing:3px;text-transform:uppercase;font-size:.8rem}
+h1{font-size:clamp(2.5rem,6vw,5rem);line-height:1.02;margin:15px 0} h1 span{color:var(--gold)}
+.lead{color:#e5d8c7;max-width:580px;font-size:1.1rem}
+.chef-photo{width:100%;max-height:470px;object-fit:cover;object-position:center 30%;border-radius:18px;border:2px solid #e6ad5555;box-shadow:0 18px 50px #0008}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-block;padding:12px 19px;border-radius:7px;font-weight:800;background:var(--gold);color:#21170b}
+.btn.alt{background:transparent;border:1px solid var(--gold);color:var(--cream)}
+section{padding:66px 0} .section-title{text-align:center;margin:0 0 10px;font-size:clamp(1.8rem,4vw,2.6rem)}
+.sub{text-align:center;color:var(--muted);max-width:680px;margin:0 auto 32px}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.photo{margin:0;background:var(--panel);border-radius:12px;overflow:hidden;border:1px solid #ffffff18}
+.photo img{display:block;width:100%;height:210px;object-fit:cover}
+.photo figcaption{padding:9px 12px;color:var(--muted);font-size:.9rem}
+.video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+video{width:100%;border-radius:12px;background:#000;border:1px solid #ffffff22}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.contact-box{background:var(--panel);padding:26px;border-radius:14px;border:1px solid #ffffff18}
+.contact-box h3{color:var(--gold);margin-top:0} .contact-line{margin:14px 0;color:var(--muted)}
+.map{width:100%;height:320px;border:0;border-radius:14px}
+footer{border-top:1px solid #ffffff20;padding:24px 0;color:var(--muted);text-align:center;font-size:.9rem}
+@media(max-width:760px){.nav{align-items:flex-start;flex-direction:column;padding:14px 0}nav{gap:16px;flex-wrap:wrap}.hero-grid,.contact-grid{grid-template-columns:1fr}.chef-photo{max-height:420px}.gallery{grid-template-columns:repeat(2,1fr)}.video-grid{grid-template-columns:1fr}section{padding:48px 0}}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"Izgaracı Ali Usta","telephone":"+905365490685","address":{"@type":"PostalAddress","streetAddress":"Gülabibey, Nurettin Bey Caddesi No:4","addressLocality":"Çorum Merkez","addressRegion":"Çorum","postalCode":"19100","addressCountry":"TR"}}</script>
 </head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="#anasayfa"><img src="assets/logo.jpg" alt="Izgaracı Ali Usta logosu">IZGARACI ALİ USTA</a><nav aria-label="Ana menü"><a href="#hakkimizda">Hakkımızda</a><a href="#lezzetler">Lezzetlerimiz</a><a href="#video">Tanıtım</a><a href="#iletisim">İletişim</a></nav></div></header>
+<header><div class="wrap nav">
+<a class="brand" href="#anasayfa"><span class="brand-mark">🔥</span><span>IZGARACI ALİ USTA</span></a>
+<nav aria-label="Ana menü"><a href="#hakkimizda">Hakkımızda</a><a href="#lezzetler">Lezzetlerimiz</a><a href="#video">Videolar</a><a href="#iletisim">İletişim</a></nav>
+</div></header>
 <main>
-<section class="hero" id="anasayfa"><div class="wrap"><div class="eyebrow">Çorum • Gülabibey</div><h1>Izgaranın<br><span>ustalıkla</span> buluştuğu yer.</h1><p class="lead">Izgaracı Ali Usta'ya hoş geldiniz. Izgara lezzetlerimizi keşfedin, bizi ziyaret edin veya telefonla iletişime geçin.</p><div class="actions"><a class="btn" href="tel:+905365490685">☎ 0536 549 06 85</a><a class="btn alt" href="#lezzetler">Lezzetlerimizi Gör</a></div></div></section>
-<section id="hakkimizda"><div class="wrap"><h2 class="section-title">Izgaracı Ali Usta</h2><p class="sub">Çorum Merkez Gülabibey'de sizleri bekliyoruz.</p><div class="intro"><img src="assets/usta.jpg" alt="Izgaracı Ali Usta, hazırladığı ızgara tabaklarıyla"><div class="intro-copy"><h3>Ustalığın ve lezzetin buluşma noktası</h3><p>Izgaracı Ali Usta'nın mutfağından çıkan lezzetleri fotoğraf galerimizde keşfedebilirsiniz. Sizleri işletmemizde ağırlamaktan mutluluk duyarız.</p><p>Adres ve telefon bilgilerimiz için iletişim bölümünü ziyaret edebilirsiniz.</p></div></div></div></section>
-<section id="lezzetler"><div class="wrap"><h2 class="section-title">Lezzetlerimiz</h2><p class="sub">Izgaralarımızdan, tabak sunumlarımızdan ve mezelerimizden kareler.</p><div class="gallery">
-<figure class="photo"><img src="assets/karisik-izgara.jpg" alt="Karışık ızgara tabağı" loading="lazy"><figcaption>Karışık ızgara tabağı</figcaption></figure>
-<figure class="photo"><img src="assets/izgara-tabagi.jpg" alt="Izgara ve garnitür sunumu" loading="lazy"><figcaption>Izgara sunumlarımız</figcaption></figure>
-<figure class="photo"><img src="assets/sis-tabagi.jpg" alt="Şiş çeşitleri ve garnitür" loading="lazy"><figcaption>Şiş çeşitleri</figcaption></figure>
-<figure class="photo"><img src="assets/kofteli-tabak.jpg" alt="Köfte ve garnitür tabağı" loading="lazy"><figcaption>Köfte tabağı</figcaption></figure>
-<figure class="photo"><img src="assets/kofta-pilav.jpg" alt="Köfte ve pilav sunumu" loading="lazy"><figcaption>Köfte ve pilav</figcaption></figure>
-<figure class="photo"><img src="assets/et-tabagi.jpg" alt="Et ve ızgara tabağı" loading="lazy"><figcaption>Izgara çeşitleri</figcaption></figure>
-<figure class="photo"><img src="assets/salata.jpg" alt="Taze salata" loading="lazy"><figcaption>Taze salata</figcaption></figure>
-<figure class="photo"><img src="assets/salata-sunum.jpg" alt="Salata sunumları" loading="lazy"><figcaption>Salata sunumları</figcaption></figure>
-<figure class="photo"><img src="assets/hosgeldiniz-salata.jpg" alt="Hoş geldiniz yazılı salata sunumu" loading="lazy"><figcaption>Özel sunumlarımız</figcaption></figure>
-<figure class="photo"><img src="assets/izgara-ocagi.jpg" alt="Izgara ocağında pişen etler" loading="lazy"><figcaption>Izgara başından</figcaption></figure>
-<figure class="photo"><img src="assets/sis-izgara.jpg" alt="Şişte pişen ızgara etler" loading="lazy"><figcaption>Şişte ızgara</figcaption></figure>
-<figure class="photo"><img src="assets/hamsi-tabaklari.jpg" alt="Hamsi sunumları" loading="lazy"><figcaption>Hamsi lezzeti</figcaption></figure>
-<figure class="photo"><img src="assets/sunum-kaseleri.jpg" alt="Meze ve salata kaseleri" loading="lazy"><figcaption>Meze ve salatalar</figcaption></figure>
+<section class="hero" id="anasayfa"><div class="wrap hero-grid">
+<div><div class="eyebrow">Çorum • Gülabibey</div><h1>Izgaranın <span>ustalıkla</span> buluştuğu yer.</h1>
+<p class="lead">Izgaracı Ali Usta'ya hoş geldiniz. Lezzetlerimizi keşfedin, bizi ziyaret edin.</p>
+<div class="actions"><a class="btn" href="tel:+905365490685">☎ 0536 549 06 85</a><a class="btn alt" href="#lezzetler">Lezzetlerimizi Gör</a></div></div>
+<img class="chef-photo" src="assets/ali-usta.jpg" alt="Ali Usta, hazırladığı ızgara tabaklarıyla">
+</div></section>
+<section id="hakkimizda"><div class="wrap"><h2 class="section-title">Izgaracı Ali Usta</h2>
+<p class="sub">Çorum Merkez Gülabibey'de sizleri bekliyoruz. Izgara lezzetlerimizi fotoğraf galerimizde keşfedin.</p></div></section>
+<section id="lezzetler"><div class="wrap"><h2 class="section-title">Lezzetlerimiz</h2><p class="sub">Galerideki görseller işletmenin assets klasöründeki fotoğraflardan yüklenir.</p>
+<div class="gallery" id="gallery"></div></div></section>
+<section id="video"><div class="wrap"><h2 class="section-title">İşletmemizden Görüntüler</h2><p class="sub">Tanıtım videolarımızı izleyebilirsiniz.</p>
+<div class="video-grid">
+<video controls preload="metadata"><source src="assets/izgaraci-video-01.mp4" type="video/mp4"></video>
+<video controls preload="metadata"><source src="assets/izgaraci-video-02.mp4" type="video/mp4"></video>
+<video controls preload="metadata"><source src="assets/izgaraci-video-03.mp4" type="video/mp4"></video>
 </div></div></section>
-<section><div class="wrap"><h2 class="section-title">Sezonun Lezzetleri</h2><p class="sub">Hamsi ve köfte duyurularımız.</p><div class="promo-grid"><img src="assets/hamsi-afis.jpg" alt="Izgaracı Ali Usta hamsi sezonu afişi" loading="lazy"><img src="assets/kofta-afis.jpg" alt="Izgaracı Ali Usta köfte afişi" loading="lazy"></div></div></section>
-<section id="video"><div class="wrap"><h2 class="section-title">İşletmemizden Görüntüler</h2><p class="sub">Izgaracı Ali Usta tanıtım videosu.</p><div class="video-wrap"><video controls playsinline preload="metadata"><source src="assets/izgaraci-tanitim.mp4" type="video/mp4">Tarayıcınız video oynatmayı desteklemiyor.</video></div></div></section>
-<section id="iletisim"><div class="wrap"><h2 class="section-title">Bize Ulaşın</h2><p class="sub">Sizi Izgaracı Ali Usta'ya bekliyoruz.</p><div class="contact-grid"><div class="contact-box"><h3>İletişim bilgileri</h3><div class="contact-line"><strong>Telefon:</strong><br><a href="tel:+905365490685">0536 549 06 85</a></div><div class="contact-line"><strong>Adres:</strong><br>Gülabibey, Nurettin Bey Cd. No:4,<br>19100 Çorum Merkez / Çorum</div><div class="actions"><a class="btn" href="tel:+905365490685">Hemen Ara</a><a class="btn alt" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Izgarac%C4%B1+Ali+Usta%2C+G%C3%BClabibey%2C+Nurettin+Bey+Cd.+No%3A4%2C+%C3%87orum">Yol Tarifi</a></div></div><iframe class="map" title="Izgaracı Ali Usta konum haritası" loading="lazy" src="https://www.google.com/maps?q=G%C3%BClabibey%2C%20Nurettin%20Bey%20Cd.%20No:4%2C%2019100%20%C3%87orum%20Merkez%2F%C3%87orum&amp;output=embed"></iframe></div></div></section>
+<section id="iletisim"><div class="wrap"><h2 class="section-title">Bize Ulaşın</h2><p class="sub">Sizi Izgaracı Ali Usta'ya bekliyoruz.</p>
+<div class="contact-grid"><div class="contact-box"><h3>İletişim bilgileri</h3>
+<div class="contact-line"><strong>Telefon:</strong><br><a href="tel:+905365490685">0536 549 06 85</a></div>
+<div class="contact-line"><strong>Adres:</strong><br>Gülabibey, Nurettin Bey Cd. No:4,<br>19100 Çorum Merkez / Çorum</div>
+<div class="actions"><a class="btn" href="tel:+905365490685">Hemen Ara</a><a class="btn alt" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Izgaraci+Ali+Usta+Corum">Yol Tarifi</a></div>
+</div><iframe class="map" title="Izgaracı Ali Usta konum haritası" loading="lazy" src="https://www.google.com/maps?q=Gulabibey%2C%20Nurettin%20Bey%20Cd.%20No%3A4%2C%20Corum&output=embed"></iframe>
+</div></div></section>
 </main><footer><div class="wrap">© 2026 Izgaracı Ali Usta. Tüm hakları saklıdır.</div></footer>
+<script>
+const photos = [
+      {src: "assets/lezzet-01.jpg", alt: "Izgaracı Ali Usta lezzetleri"},
+      {src: "assets/lezzet-02.jpg", alt: "Izgaracı Ali Usta lezzetleri"},
+      {src: "assets/lezzet-03.jpg", alt: "Izgaracı Ali Usta lezzetleri"},
+      {src: "assets/lezzet-04.jpg", alt: "Izgaracı Ali Usta lezzetleri"},
+      {src: "assets/lezzet-05.jpg", alt: "Izgaracı Ali Usta lezzetleri"},
+      {src: "assets/lezzet-07.jpg", alt: "Izgaracı Ali Usta lezzetleri"},
+      {src: "assets/lezzet-08.jpg", alt: "Izgaracı Ali Usta lezzetleri"},
+      {src: "assets/lezzet-09.jpg", alt: "Izgaracı Ali Usta lezzetleri"},
+      {src: "assets/lezzet-10.jpg", alt: "Izgaracı Ali Usta lezzetleri"},
+      {src: "assets/lezzet-11.jpg", alt: "Izgaracı Ali Usta lezzetleri"},
+      {src: "assets/lezzet-12.jpg", alt: "Izgaracı Ali Usta lezzetleri"},
+      {src: "assets/lezzet-13.jpg", alt: "Izgaracı Ali Usta lezzetleri"},
+      {src: "assets/lezzet-14.jpg", alt: "Izgaracı Ali Usta lezzetleri"},
+      {src: "assets/lezzet-15.jpg", alt: "Izgaracı Ali Usta lezzetleri"},
+      {src: "assets/lezzet-17.jpg", alt: "Izgaracı Ali Usta lezzetleri"},
+      {src: "assets/lezzet-18.jpg", alt: "Izgaracı Ali Usta lezzetleri"},
+      {src: "assets/lezzet-19.jpg", alt: "Izgaracı Ali Usta lezzetleri"},
+      {src: "assets/lezzet-21.jpg", alt: "Izgaracı Ali Usta lezzetleri"},
+      {src: "assets/lezzet-22.jpg", alt: "Izgaracı Ali Usta lezzetleri"},
+      {src: "assets/lezzet-23.jpg", alt: "Izgaracı Ali Usta lezzetleri"}
+];
+const gallery = document.getElementById('gallery');
+photos.forEach((item, index) => {
+  const figure = document.createElement('figure');
+  figure.className = 'photo';
+  const img = document.createElement('img');
+  img.src = item.src;
+  img.alt = item.alt;
+  img.loading = 'lazy';
+  img.onerror = () => { figure.remove(); };
+  const caption = document.createElement('figcaption');
+  caption.textContent = 'Izgaracı Ali Usta lezzetleri';
+  figure.append(img, caption);
+  gallery.appendChild(figure);
+});
+</script>
 </body></html>
